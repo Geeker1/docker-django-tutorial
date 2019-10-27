@@ -10,7 +10,7 @@ COPY ./dockerTutorial .
 
 RUN adduser -S admin
 RUN chown -R admin ../django
-#RUN ls -l -a
+
 USER admin
 
 #RUN python manage.py makemigrations
