@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Docker Redis Django</title>
+</head>
+<body>
+	<form method="post">
+		{% csrf_token %}
+		<input type="text" name="key" value="{{ key }}" placeholder="Place in a key">
+		<input type="text" name="cache_value" value="{{ cache_value }}" placeholder="Put in value to cache">
+		<input type="submit" name="submit" value="save">
+		<input type="submit" name="submit" value="load">
+	</form>
+</body>
+</html>
