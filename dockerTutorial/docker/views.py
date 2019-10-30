@@ -4,7 +4,7 @@ import redis
 # Create your views here.
 
 cache = redis.Redis(
-    host='localhost',
+    host='redis',
     port=6379,
     db=0)
 default_key = "1"
