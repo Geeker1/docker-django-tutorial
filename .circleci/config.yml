@@ -1,0 +1,19 @@
+version: 2
+jobs:
+  build:
+    working_directory: /dockerTutorial
+    docker:
+      - image: django:17.5.0-ce-git
+    steps:
+      - checkout
+      - setup_remote_docker
+      - run:
+          name: Install dependencies
+          command:
+            apk add --no-cache py-pip=10.0.0-r1
+            pip install docker-compose
+      - run:
+          name: Run tests
+          command:
+            docker-compose up -d
+            docker-compose run django python manage.py test
