@@ -6,7 +6,7 @@ jobs:
       - image: django:17.5.0-ce-git
     branches:
       only:
-        - testing
+        - master
     steps:
       - checkout
       - setup_remote_docker
