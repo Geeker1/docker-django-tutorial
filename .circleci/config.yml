@@ -4,6 +4,9 @@ jobs:
     working_directory: /dockerTutorial
     docker:
       - image: django:17.5.0-ce-git
+    branches:
+      only:
+        - testing
     steps:
       - checkout
       - setup_remote_docker
