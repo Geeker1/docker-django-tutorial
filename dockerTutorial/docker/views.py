@@ -2,7 +2,7 @@ from django.shortcuts import render
 import redis
 
 # Create your views here.
-
+print("Checking redis files, before error")
 cache = redis.Redis(
     host='redis',
     port=6379,

@@ -2,7 +2,7 @@ version: '3'
 services:
     django:
         build: .
-        image: django:v0.3
+        image: django:v0.5
         ports:
             - "8000:8000"
         depends_on:
