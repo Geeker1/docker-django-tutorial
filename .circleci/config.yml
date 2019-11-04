@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: /dockerTutorial
     docker:
-      - image: django:17.5.0-ce-git
+      - image: docker:18.09.3-ce-git
     branches:
       only:
         - master
