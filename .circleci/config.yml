@@ -1,15 +1,12 @@
 version: 2
 jobs:
   build:
-    working_directory: /dockerTutorial
     docker:
       - image: circleci/python:3.7.2
     branches:
       only:
         - master
     steps:
-      - run:
-          chown -R $USER:$USER /dockerTutorial
       - checkout
       - setup_remote_docker
       - run:
