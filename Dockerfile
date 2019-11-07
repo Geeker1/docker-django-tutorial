@@ -9,7 +9,7 @@ RUN pip install -r  requirements.txt
 
 COPY ./dockerTutorial .
 
-RUN adduser -S admin
+RUN adduser -S admin --system
 RUN chown -R admin ../django
 
 USER admin

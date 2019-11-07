@@ -1,15 +1,17 @@
 from django.shortcuts import render
 import redis
+import sys
 
 # Create your views here.
-print("Checking redis files, before error")
-cache = redis.Redis(
-    host='redis',
-    port=6379,
-    db=0)
-default_key = "1"
 
-cache.set(default_key, "one")
+if ('manage.py' and ('runserver' or 'test')) in sys.argv:
+    cache = redis.Redis(
+        host='redis',
+        port=6379,
+        db=0)
+    default_key = "1"
+
+    cache.set(default_key, "one")
 
 
 def index(request):
