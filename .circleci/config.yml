@@ -8,8 +8,10 @@ jobs:
       only:
         - master
     steps:
-      # - checkout
-      # - setup_remote_docker
+      - run:
+          chown -R $USER:$USER /dockerTutorial
+      - checkout
+      - setup_remote_docker
       - run:
           name: Install dependencies
           command: |
