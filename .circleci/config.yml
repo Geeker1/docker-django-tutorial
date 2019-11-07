@@ -12,6 +12,7 @@ jobs:
       - setup_remote_docker
       - run:
           name: Install dependencies
+          shell: /bin/bash
           command: |
             python --version
             apk add --update py-pip
