@@ -13,9 +13,10 @@ jobs:
       - run:
           name: Install dependencies
           command: |
-            apk add --update py-pip3
-            pip3 install --upgrade pip3
-            pip3 install docker-compose
+            apk add --update py-pip
+            pip install --upgrade pip
+            pip install --upgrade setuptools
+            pip install docker-compose
       - run:
           name: Run tests
           command: |
