@@ -5,6 +5,8 @@ services:
         image: django:v0.5
         ports:
             - "8000:8000"
+        volumes:
+          - .:/var/www
         depends_on:
             - redis
         networks:

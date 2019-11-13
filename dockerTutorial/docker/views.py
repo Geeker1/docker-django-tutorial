@@ -16,6 +16,7 @@ if ('manage.py' and ('runserver' or 'test')) in sys.argv:
 
 def index(request):
     key = default_key
+    print(request)
 
     if request.method == 'POST':
         if 'key' in request.POST:
