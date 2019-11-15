@@ -12,10 +12,6 @@ jobs:
       - run:
           name: Build image
           command: |
-            ls
             sudo docker-compose -f docker-compose.test.yml up -d
-            # sudo docker cp ./dockerTutorial django_container:/var/www/dockerTutorial
-            # sudo docker exec -it django_container ls -al
-            sudo docker-compose exec django ls -al
-            # sudo docker-compose run django ls -al
+            sudo docker-compose exec django python manage.py test
             sudo docker-compose down
