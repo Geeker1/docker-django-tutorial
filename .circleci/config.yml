@@ -12,6 +12,6 @@ jobs:
       - run:
           name: Build image
           command: |
-            sudo docker-compose -f docker-compose.test.yml up -d
-            sudo docker-compose exec django python manage.py test
-            sudo docker-compose down
+            docker-compose -f docker-compose.test.yml up -d
+            docker-compose exec django python manage.py test
+            docker-compose down
