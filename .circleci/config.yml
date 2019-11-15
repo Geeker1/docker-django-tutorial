@@ -10,8 +10,6 @@ jobs:
       - checkout
       - setup_remote_docker
       - run:
-          name: Run tests
+          name: Build image
           command: |
-            sudo docker-compose -f docker-compose.test.yml up -d --build
-            sudo docker-compose run django test
-            # sudo docker-compose run --entrypoint ls --rm django
+            ls

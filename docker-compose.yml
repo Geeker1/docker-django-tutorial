@@ -3,6 +3,7 @@ services:
     django:
         build: .
         image: django:v0.5
+        container_name: django_container
         ports:
             - "8000:8000"
         volumes:

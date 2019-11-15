@@ -8,6 +8,9 @@ class Author(models.Model):
     title = models.CharField(max_length=3)
     sex = models.CharField(max_length=6)
 
+    class Meta:
+        app_label = 'docker'
+
 
 class Book(models.Model):
     name = models.CharField(max_length=11)
@@ -17,3 +20,6 @@ class Book(models.Model):
         related_name='books',
         on_delete=models.CASCADE
     )
+
+    class Meta:
+        app_label = 'docker'
