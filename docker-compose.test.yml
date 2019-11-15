@@ -1,0 +1,19 @@
+version: '3'
+services:
+    django:
+        build: .
+        image: django:v0.5
+        container_name: django_container
+        ports:
+            - "8000:8000"
+        depends_on:
+            - redis
+        networks:
+          - my_net
+    redis:
+        image: redis:alpine
+        networks:
+          - my_net
+networks:
+  my_net:
+    driver: bridge
